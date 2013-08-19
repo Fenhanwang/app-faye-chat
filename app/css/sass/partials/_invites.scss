@@ -1,0 +1,77 @@
+$activepersoncolor: #222;
+$activetimecolor: #444;
+$activemessagecolor: #444;
+$activebgcolor: #febf04;
+$lightcolor: #febf04;
+$inactivetextcolor: #898989;
+$inactivebgcolor: #444;
+$bordercolor: #555;
+$usersearchbgcolor: #febf04;
+$bgcolor: #444;
+
+
+
+#pending {
+  width: 400px;
+  height: 400px;
+  background: red;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+
+  .user-search-area {
+    height: 40px;
+
+    input[type="text"] {
+      margin: 0 0 0 10px;
+      border-radius: 0;
+      -moz-border-radius: 0;
+      border: none;
+    }
+
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  ul li:last-child {
+    border-bottom: 1px solid $bordercolor;
+  }
+
+  ul li {
+    list-style: none;
+    width: 100%;
+    height: 60px;
+    background: $inactivebgcolor;
+    border-top: 1px solid $bordercolor;
+
+    .user-info {
+      margin: 0px 10px 0 70px;
+      padding-top: 5px;
+
+      p {
+        margin-bottom: 0;
+        color: $inactivetextcolor;
+      }
+
+      p.user-name {
+        font-weight: bold;
+      }
+
+      p.user-time {
+        float:right !important;
+      }
+
+      p.user-message {
+        font-size: 8pt;
+        color: $inactivetextcolor;
+        line-height: 1.3em;
+      }
+    }
+  }
+
+
+
+}

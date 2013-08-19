@@ -1,0 +1,109 @@
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="navbar navbar-fixed-top navbar-inverse">
+            <div class="navbar-inner">
+                <span class="brand">Chat App</span>
+                <ul class="nav pull-right">
+                    <li><a data-ng-click="logout()">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    <div class="row-fluid">
+        <div class="span4" id="users-list">
+            <div class="user-search-area">
+                <form class="navbar-search">
+                    <input type="text" placeholder="Search" data-ng-model="searchUsers">
+                </form>
+            </div>
+
+            <div class="clear-left"></div>
+            <ul>
+                <li class="user" data-ng-repeat="user in users.record | filter: searchUsers | filter: removeMe"
+                    data-ng-click="selectUser(user);"
+                    data-ng-class="{true: 'active', false: ''}[user.email === activeUser.email]">
+                    <div class="pull-left test-avatar"
+                         data-ng-class="{'online': 'online', 'offline': 'offline', 'away': 'away'}[user.status]">
+
+                    </div>
+                    <div class="user-info">
+                        <p class="pull-left user-name">{{user.display_name}}</p>
+                        <i class="icon-comment icon-align icon-color" data-ng-show="(localSessionManager[user._id].active === true) && (localSessionManager[user._id].lastmessage !== thisUser._id) && (localSessionManager[user._id].lastmessage !== null)"></i>
+                        <i class="icon-envelope icon-align icon-color" data-ng-show="((localSessionManager[user._id]) && (localSessionManager[user._id].active === false))"></i>
+
+                        <p class="pull-right user-time">10:18 AM</p>
+
+                        <div class="clear-right"></div>
+                        <p class="pull-left user-message"> Test user message and extra text for multi line display.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="span8" id="chat-box">
+            <div class="header">
+                <p class="user-info">
+                    <span class="user-name">To: {{activeUser.display_name}}</span>
+                    <span data-ng-show="activeUser.status === 'online'"class="user-online"><i class="icon-ok-sign"></i></span>
+                </p>
+            </div>
+
+            <div class="message-area">
+                <div data-ng-show="activeUser != null">
+                    <div class="invite" data-ng-hide="localSessionManager[activeUser._id].active">
+                        <div id="inviteSend" data-ng-hide="localSessionManager[activeUser._id]">
+                            <div class="dialog-window">
+                                <div class="dialog-message">
+                                    <span>Invite {{activeUser.display_name}} to chat.</span>
+                                    <button type="button" class="btn btn-inverse btn-small" data-ng-click="sendInvite(activeUser)">Send Invite</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div id="inviteWait" data-ng-show="localSessionManager[activeUser._id].host.email === thisUser.email">
+                            <div class="dialog-window">
+                                <div class="dialog-message">
+                                    <span>Waiting for {{activeUser.display_name}} to accept.</span>
+                                    <div class="progress progress-success progress-striped active">
+                                        <div class="bar" style="width: 100%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="inviteRespond" data-ng-show="localSessionManager[activeUser._id].guest.email === thisUser.email">
+                            <div class="dialog-window">
+                                <div class="dialog-message">
+                                    <span>{{activeUser.display_name}} has invited you to chat.</span>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-inverse btn-small" data-ng-click="acceptInvite(activeUser)">Accept Invite</button>
+                                        <button type="button" class="btn btn-danger btn-small" data-ng-click="declineInvite(activeUser)">Decline Invite</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div data-ng-show="localSessionManager[activeUser._id].active">
+                        <ul>
+                            <li data-ng-repeat="message in localMessageManager[localSessionManager[activeUser._id].channel]">
+                                <div class="message" data-ng-class="{true: 'align-left' , false: 'align-right'}[message.user.email === thisUser.email]">
+                                    <p class="message-bubble align-right">{{message.content.text}}</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <form name="messageForm" class="input" data-ng-submit="sendMessage(newMessage)">
+                    <input type="text" name="chat-text" id="chat-text" placeholder="Enter message" data-ng-model="newMessage">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

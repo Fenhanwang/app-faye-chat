@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div id="login-page">
+            <div class="make-center">
+                <div id="logo">
+                    <h1>Chat App</h1>
+                </div>
+
+                <div class="alert alert-error my-alert" data-ng-show="error != null">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Warning!</strong> {{error}}
+                </div>
+
+                <form name="loginForm" data-ng-submit="login(creds)">
+                    <p>
+                        <input type="text"
+                               name="email"
+                               id="email"
+                               placeholder="Email"
+                               data-ng-model="creds.email">
+                    </p>
+                    <p>
+                        <input type="password"
+                               name="password"
+                               id="password"
+                               placeholder="Password"
+                               data-ng-model="creds.password">
+                    </p>
+                    <p>
+                        <input type="submit" class="btn login-btn" id="submit" value="Login">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

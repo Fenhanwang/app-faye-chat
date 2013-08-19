@@ -1,0 +1,339 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 18, ../sass/partials/_users-list.scss */
+#users-list {
+  position: absolute;
+  top: 42px;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: #ecf0f1;
+}
+/* line 28, ../sass/partials/_users-list.scss */
+#users-list .user-search-area {
+  height: 40px;
+}
+/* line 33, ../sass/partials/_users-list.scss */
+#users-list .user-search-area input[type="text"] {
+  margin: 0 0 0 10px;
+}
+/* line 40, ../sass/partials/_users-list.scss */
+#users-list ul {
+  margin: 0;
+}
+/* line 45, ../sass/partials/_users-list.scss */
+#users-list ul li:last-child {
+  border-bottom: 1px solid #bdc3c7;
+}
+/* line 49, ../sass/partials/_users-list.scss */
+#users-list ul li {
+  list-style: none;
+  width: 100%;
+  height: 60px;
+  background: #ecf0f1;
+  border-top: 1px solid #bdc3c7;
+}
+/* line 57, ../sass/partials/_users-list.scss */
+#users-list ul li .user-info {
+  margin: 0px 10px 0 70px;
+  padding-top: 5px;
+}
+/* line 61, ../sass/partials/_users-list.scss */
+#users-list ul li .user-info p {
+  margin-bottom: 0;
+  color: #898989;
+  padding-right: 15px;
+}
+/* line 67, ../sass/partials/_users-list.scss */
+#users-list ul li .user-info p.user-name {
+  font-weight: bold;
+}
+/* line 71, ../sass/partials/_users-list.scss */
+#users-list ul li .user-info .icon-color {
+  color: black;
+}
+/* line 76, ../sass/partials/_users-list.scss */
+#users-list ul li .user-info .icon-align {
+  vertical-align: text-bottom;
+  margin-top: 2px;
+  float: left;
+}
+/* line 82, ../sass/partials/_users-list.scss */
+#users-list ul li .user-info p.user-time {
+  float: right !important;
+}
+/* line 86, ../sass/partials/_users-list.scss */
+#users-list ul li .user-info p.user-message {
+  font-size: 8pt;
+  color: #898989;
+  line-height: 1.3em;
+}
+/* line 95, ../sass/partials/_users-list.scss */
+#users-list ul li.active {
+  background: #34495e;
+  border-top: 1px solid #bdc3c7;
+}
+/* line 106, ../sass/partials/_users-list.scss */
+#users-list ul li.active .user-info p.user-name {
+  color: #ecf0f1;
+  padding-right: 15px;
+}
+/* line 111, ../sass/partials/_users-list.scss */
+#users-list ul li.active .user-info .icon-color {
+  color: #ecf0f1;
+}
+/* line 115, ../sass/partials/_users-list.scss */
+#users-list ul li.active .user-info p.user-time {
+  color: #ecf0f1;
+}
+/* line 119, ../sass/partials/_users-list.scss */
+#users-list ul li.active .user-info p.user-message {
+  color: #ecf0f1;
+}
+
+/* line 127, ../sass/partials/_users-list.scss */
+.test-avatar {
+  height: 50px;
+  width: 50px;
+  margin: 5px 0 0 10px;
+}
+
+/* line 135, ../sass/partials/_users-list.scss */
+.offline {
+  background: #333;
+}
+
+/* line 139, ../sass/partials/_users-list.scss */
+.online {
+  background: green;
+}
+
+/* line 143, ../sass/partials/_users-list.scss */
+.away {
+  background: yellow;
+}
+
+@media screen and (max-width: 980px) {
+  /* line 149, ../sass/partials/_users-list.scss */
+  #users-list {
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: #ecf0f1;
+  }
+}
+/* line 12, ../sass/partials/_chat-box.scss */
+#chat-box {
+  background: green;
+  position: absolute;
+  top: 42px;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+/* line 20, ../sass/partials/_chat-box.scss */
+#chat-box .header {
+  height: 40px;
+  background: #ecf0f1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  border-left: 1px solid #bdc3c7;
+}
+/* line 29, ../sass/partials/_chat-box.scss */
+#chat-box .header p.user-info {
+  margin: 10px 0 0 10px;
+}
+/* line 41, ../sass/partials/_chat-box.scss */
+#chat-box .message-area {
+  position: absolute;
+  width: 100%;
+  top: 40px;
+  bottom: 40px;
+  overflow-y: scroll;
+  background: #34495e;
+  border-top: 1px solid #bdc3c7;
+  border-left: 1px solid #405972;
+}
+/* line 51, ../sass/partials/_chat-box.scss */
+#chat-box .message-area ul {
+  margin: 10px 5px;
+}
+/* line 55, ../sass/partials/_chat-box.scss */
+#chat-box .message-area ul li {
+  margin-bottom: 20px;
+  list-style: none;
+}
+/* line 59, ../sass/partials/_chat-box.scss */
+#chat-box .message-area ul li .message {
+  display: block;
+}
+/* line 63, ../sass/partials/_chat-box.scss */
+#chat-box .message-area ul li .message p.message-bubble {
+  max-width: 65%;
+  display: inline-block;
+  margin: 5px;
+  padding: 15px;
+  text-align: left;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 76, ../sass/partials/_chat-box.scss */
+#chat-box .message-area ul li .align-left {
+  text-align: left;
+}
+/* line 79, ../sass/partials/_chat-box.scss */
+#chat-box .message-area ul li .align-left p.message-bubble {
+  background: #deefff;
+}
+/* line 84, ../sass/partials/_chat-box.scss */
+#chat-box .message-area ul li .align-right {
+  text-align: right;
+}
+/* line 87, ../sass/partials/_chat-box.scss */
+#chat-box .message-area ul li .align-right p.message-bubble {
+  background: #cdeb8b;
+}
+/* line 93, ../sass/partials/_chat-box.scss */
+#chat-box .message-area .dialog-window {
+  width: 100%;
+  height: 40px;
+  background: #ecf0f1;
+}
+/* line 98, ../sass/partials/_chat-box.scss */
+#chat-box .message-area .dialog-window .dialog-message {
+  padding: 8px 0 0 10px;
+}
+/* line 101, ../sass/partials/_chat-box.scss */
+#chat-box .message-area .dialog-window .dialog-message span {
+  float: left;
+  margin-right: 20px;
+}
+/* line 110, ../sass/partials/_chat-box.scss */
+#chat-box .message-area .dialog-window .progress {
+  width: 100px;
+}
+/* line 118, ../sass/partials/_chat-box.scss */
+#chat-box .input-area {
+  background: #ecf0f1;
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid #bdc3c7;
+  border-left: 1px solid #bdc3c7;
+}
+/* line 127, ../sass/partials/_chat-box.scss */
+#chat-box .input-area form.input {
+  margin: 5px 0 0 10px;
+}
+
+@media screen and (max-width: 980px) {
+  /* line 135, ../sass/partials/_chat-box.scss */
+  #chat-box {
+    background: green;
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
+/* line 14, ../sass/partials/_invites.scss */
+#pending {
+  width: 400px;
+  height: 400px;
+  background: red;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+/* line 23, ../sass/partials/_invites.scss */
+#pending .user-search-area {
+  height: 40px;
+}
+/* line 26, ../sass/partials/_invites.scss */
+#pending .user-search-area input[type="text"] {
+  margin: 0 0 0 10px;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  border: none;
+}
+/* line 35, ../sass/partials/_invites.scss */
+#pending ul {
+  margin: 0;
+}
+/* line 39, ../sass/partials/_invites.scss */
+#pending ul li:last-child {
+  border-bottom: 1px solid #555555;
+}
+/* line 43, ../sass/partials/_invites.scss */
+#pending ul li {
+  list-style: none;
+  width: 100%;
+  height: 60px;
+  background: #444444;
+  border-top: 1px solid #555555;
+}
+/* line 50, ../sass/partials/_invites.scss */
+#pending ul li .user-info {
+  margin: 0px 10px 0 70px;
+  padding-top: 5px;
+}
+/* line 54, ../sass/partials/_invites.scss */
+#pending ul li .user-info p {
+  margin-bottom: 0;
+  color: #898989;
+}
+/* line 59, ../sass/partials/_invites.scss */
+#pending ul li .user-info p.user-name {
+  font-weight: bold;
+}
+/* line 63, ../sass/partials/_invites.scss */
+#pending ul li .user-info p.user-time {
+  float: right !important;
+}
+/* line 67, ../sass/partials/_invites.scss */
+#pending ul li .user-info p.user-message {
+  font-size: 8pt;
+  color: #898989;
+  line-height: 1.3em;
+}
+
+/* line 8, ../sass/partials/_login.scss */
+#login-page .make-center {
+  text-align: center;
+  margin: auto;
+  width: 300px;
+}
+/* line 14, ../sass/partials/_login.scss */
+#login-page .make-center #logo {
+  width: 300px;
+  margin: 40px auto 20px auto;
+  display: block;
+}
+/* line 21, ../sass/partials/_login.scss */
+#login-page .make-center #logo h1 {
+  color: #bdc3c7;
+}
+/* line 31, ../sass/partials/_login.scss */
+#login-page .make-center .my-alert {
+  text-align: left;
+}
+
+/* line 12, ../sass/screen.scss */
+body {
+  overflow: hidden;
+  background: #34495e;
+}
+
+/* line 17, ../sass/screen.scss */
+.nav-pad {
+  padding: auto 20px;
+}

@@ -1,0 +1,37 @@
+
+
+$titlecolor: #bdc3c7;
+
+#login-page {
+
+
+  .make-center {
+    text-align:center;
+    margin: auto;
+    width:300px;
+
+
+    #logo {
+      width: 300px;
+
+      margin: 40px auto 20px auto;
+
+      display: block;
+
+      h1 {
+        color: $titlecolor;
+      }
+
+    }
+
+    .login-btn {
+
+    }
+
+    .my-alert {
+      text-align: left;
+    }
+  }
+
+
+}

@@ -1,0 +1,157 @@
+
+$activepersoncolor: #ecf0f1;
+$activetimecolor: #ecf0f1;
+$activemessagecolor: #ecf0f1;
+$activeiconcolor: #ecf0f1;
+$activebgcolor: #34495e;
+$activebordercolor: #bdc3c7;
+$lightcolor: #febf04;
+$inactiveiconcolor: #000;
+$inactivetextcolor: #898989;
+$inactivebgcolor: #ecf0f1;
+$inactivebordercolor: #bdc3c7;
+$usersearchbgcolor: #2980b9;
+$bgcolor: #ecf0f1;
+
+
+
+#users-list {
+
+  position: absolute;
+  top: 42px;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: $bgcolor;
+
+
+  .user-search-area {
+    height: 40px;
+
+
+
+    input[type="text"] {
+      margin: 0 0 0 10px;
+
+    }
+
+  }
+
+  ul {
+    margin: 0;
+
+  }
+
+  ul li:last-child {
+    border-bottom: 1px solid $inactivebordercolor;
+  }
+
+  ul li {
+    list-style: none;
+    width: 100%;
+    height: 60px;
+    background: $inactivebgcolor;
+    border-top: 1px solid $inactivebordercolor;
+
+
+    .user-info {
+      margin: 0px 10px 0 70px;
+      padding-top: 5px;
+
+      p {
+        margin-bottom: 0;
+        color: $inactivetextcolor;
+        padding-right: 15px;
+      }
+
+      p.user-name {
+        font-weight: bold;
+      }
+
+      .icon-color {
+        color: $inactiveiconcolor;
+
+      }
+
+      .icon-align {
+        vertical-align: text-bottom;
+        margin-top: 2px;
+        float: left;
+      }
+
+      p.user-time {
+        float:right !important;
+      }
+
+      p.user-message {
+        font-size: 8pt;
+        color: $inactivetextcolor;
+        line-height: 1.3em;
+      }
+
+    }
+  }
+
+  ul li.active {
+    background: $activebgcolor;
+    border-top: 1px solid $activebordercolor;
+
+
+    .user-info {
+
+      p {
+
+      }
+
+      p.user-name {
+        color: $activepersoncolor;
+        padding-right: 15px;
+      }
+
+      .icon-color {
+        color: $activeiconcolor;
+      }
+
+      p.user-time {
+        color: $activetimecolor;
+      }
+
+      p.user-message {
+        color: $activemessagecolor;
+      }
+
+    }
+  }
+}
+
+.test-avatar {
+  height: 50px;
+  width: 50px;
+  margin: 5px 0 0 10px;
+
+
+}
+
+.offline {
+  background: #333;
+}
+
+.online {
+  background: green;
+}
+
+.away {
+  background: yellow;
+}
+
+@media screen and (max-width: 980px) {
+
+  #users-list {
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: $bgcolor;
+  }
+}
