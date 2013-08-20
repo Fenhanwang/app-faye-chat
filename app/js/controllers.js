@@ -16,10 +16,13 @@ angular.module('myApp.controllers', []).
             $scope.login = function (creds) {
                 Users.login(creds).then(function (resulta) {
                         Users.creds = creds;
+
                         AppInfo.isRegisteredUser(resulta).then(function (resultb) {
+
+                            resultb.session_id = resulta.session_id;
+
                             AppInfo.setOnline(resultb).then(function () {
                                     Users.user = resultb;
-                                    Users.user.session_id = resulta.session_id;
                                     $location.path('/chat');
                                 },
                                 function (reject) {
